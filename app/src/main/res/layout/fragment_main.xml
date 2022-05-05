@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_fragment_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_fragment_data_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/main_fragment_data_container_margin_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/main_fragment_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_top"
+                    android:text="@string/main_fragment_header"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/main_fragment_header_text_size" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/main_fragment_picture_of_the_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_top"
+                    android:scaleType="centerInside" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/main_fragment_picture_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_top"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/main_fragment_picture_title_text_size" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/main_fragment_picture_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_top"
+                    android:textAlignment="textStart"
+                    android:justificationMode="inter_word"
+                    android:textSize="@dimen/main_fragment_picture_description_text_size" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/main_fragment_wikipedia_text_input"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_top"
+                    app:boxCornerRadiusBottomEnd="@dimen/main_fragment_wikipedia_text_input_radius"
+                    app:boxCornerRadiusTopStart="@dimen/main_fragment_wikipedia_text_input_radius"
+                    app:endIconDrawable="@drawable/ic_baseline_clear_24"
+                    app:endIconMode="clear_text"
+                    app:helperText="@string/main_fragment_wikipedia_text_input_helper_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin_top"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/main_fragment_search_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_top"
+                    android:layout_marginBottom="@dimen/main_fragment_interface_margin_bottom"
+                    android:text="@string/main_fragment_search_button_text" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</FrameLayout>

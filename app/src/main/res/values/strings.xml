@@ -1,3 +1,14 @@
 <resources>
+
+    <!-- Common Application begin -->
     <string name="app_name">NASA Explorer</string>
+    <string name="empty_query">Empty query!</string>
+    <!-- Common Application end -->
+
+    <!-- MainFragment begin -->
+    <string name="main_fragment_header">Picture of the day</string>
+    <string name="main_fragment_wikipedia_text_input_helper_text">Type words for searching in Wikipedia</string>
+    <string name="main_fragment_search_button_text">Search</string>
+    <!-- MainFragment end -->
+
 </resources>
