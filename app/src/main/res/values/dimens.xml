@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- Common Application begin -->
+    <dimen name="common_zero">0dp</dimen>
     <dimen name="common_margin_top">10dp</dimen>
+    <dimen name="common_margin_horizontal">10dp</dimen>
+    <dimen name="common_margin_bottom">50dp</dimen>
+    <dimen name="common_header_large">40sp</dimen>
+    <dimen name="common_header_medium">30sp</dimen>
+    <dimen name="common_header_small">20sp</dimen>
     <!-- Common Application end -->
 
-    <!-- MainFragment begin -->
-    <dimen name="main_fragment_data_container_margin_horizontal">5dp</dimen>
-    <dimen name="main_fragment_header_text_size">30sp</dimen>
-    <dimen name="main_fragment_picture_title_text_size">20sp</dimen>
-    <dimen name="main_fragment_picture_description_text_size">15sp</dimen>
-    <dimen name="main_fragment_wikipedia_text_input_radius">20dp</dimen>
-    <dimen name="main_fragment_interface_margin_bottom">50dp</dimen>
-    <!-- MainFragment end-->
+    <!-- BottomSheet begin -->
+    <dimen name="bottom_sheet_root_behavior_peekheight">50dp</dimen>
+    <dimen name="bottom_sheet_picture_explanation_text_size">15sp</dimen>
+    <dimen name="bottom_sheet_wikipedia_text_input_radius">20dp</dimen>
+    <dimen name="bottom_sheet_search_button_text_size">20sp</dimen>
+    <!-- BottomSheet end -->
 
 </resources>

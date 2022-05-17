@@ -2,8 +2,9 @@ package com.geekbrains.nasaexplorer.domain
 
 import com.geekbrains.nasaexplorer.BuildConfig
 import com.geekbrains.nasaexplorer.api.NasaApi
-import com.geekbrains.nasaexplorer.api.PictureOfTheDayResponse
+import com.geekbrains.nasaexplorer.api.PictureOfTheDayInfo
 import com.geekbrains.nasaexplorer.common.BASE_NASA_URL
+import com.geekbrains.nasaexplorer.utils.convertPOTDRtoPOTDI
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -24,6 +25,6 @@ class NasaRepositoryImpl : NasaRepository {
         .build()
         .create(NasaApi::class.java)
 
-    override suspend fun pictureOfTheDay(): PictureOfTheDayResponse =
-        api.pictureOfTheDay(BuildConfig.NASA_API_KEY)
+    override suspend fun pictureOfTheDay(): PictureOfTheDayInfo =
+        convertPOTDRtoPOTDI(api.pictureOfTheDay(BuildConfig.NASA_API_KEY))
 }

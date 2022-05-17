@@ -5,10 +5,25 @@
     <string name="empty_query">Empty query!</string>
     <!-- Common Application end -->
 
+    <!-- BottomNavigation begin -->
+    <string name="bottom_navigation_home">Home</string>
+    <string name="bottom_navigation_settings">Settings</string>
+    <!-- BottomNavigation end -->
+
     <!-- MainFragment begin -->
     <string name="main_fragment_header">Picture of the day</string>
-    <string name="main_fragment_wikipedia_text_input_helper_text">Type words for searching in Wikipedia</string>
-    <string name="main_fragment_search_button_text">Search</string>
     <!-- MainFragment end -->
+
+    <!-- BottomSheet begin -->
+    <string name="bottom_sheet_wikipedia_text_input_helper_text">Type words for searching in Wikipedia</string>
+    <string name="bottom_sheet_search_button_text">Search</string>
+    <!-- BottomSheet end -->
+
+    <!-- SettingsFragment begin -->
+    <string name="settings_fragment_themes_header">Select theme</string>
+    <string name="settings_fragment_system_default_theme">System default</string>
+    <string name="settings_fragment_moon_theme">Moon</string>
+    <string name="settings_fragment_mars_theme">Mars</string>
+    <!-- SettingsFragment end -->
 
 </resources>
