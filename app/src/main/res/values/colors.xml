@@ -7,4 +7,36 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="bottom_sheet_fragment_root_background">#c7dcff</color>
+
+    <!-- Moon day colors begin -->
+    <color name="moon_day_1">#998F96</color>
+    <color name="moon_day_2">#564249</color>
+    <color name="moon_day_3">#B4BCC5</color>
+    <color name="moon_day_4">#717C73</color>
+    <color name="moon_day_5">#DDDFE4</color>
+    <!-- Moon day colors end -->
+
+    <!-- Moon night colors begin -->
+    <color name="moon_night_1">#94908d</color>
+    <color name="moon_night_2">#31302e</color>
+    <color name="moon_night_3">#AA83D1</color>
+    <color name="moon_night_4">#6D6FBC</color>
+    <!-- Moon night colors end -->
+
+    <!-- Mars day colors begin -->
+    <color name="mars_day_1">#8E6A5A</color>
+    <color name="mars_day_2">#663926</color>
+    <color name="mars_day_3">#FF9D6F</color>
+    <color name="mars_day_4">#C67B5C</color>
+    <color name="mars_day_5">#F8F0D3</color>
+    <!-- Mars day colors end -->
+
+    <!-- Mars night colors begin -->
+    <color name="mars_night_1">#741630</color>
+    <color name="mars_night_2">#40152a</color>
+    <color name="mars_night_3">#ff5435</color>
+    <color name="mars_night_4">#cc1e2c</color>
+    <!-- Mars night colors end -->
+
 </resources>

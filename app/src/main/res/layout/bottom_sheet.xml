@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bottom_sheet_fragment_root_background"
+    android:visibility="gone"
+    app:behavior_peekHeight="@dimen/bottom_sheet_root_behavior_peekheight"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    tools:visibility="visible">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/bottom_sheet_data_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin_bottom"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/bottom_sheet_picture_title"
+                    style="@style/Header.Medium"
+                    android:layout_marginTop="@dimen/common_margin_top" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/bottom_sheet_picture_explanation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_top"
+                    android:justificationMode="inter_word"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/bottom_sheet_picture_explanation_text_size" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/bottom_sheet_wikipedia_text_input"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_top"
+                    app:boxCornerRadiusBottomEnd="@dimen/bottom_sheet_wikipedia_text_input_radius"
+                    app:boxCornerRadiusTopStart="@dimen/bottom_sheet_wikipedia_text_input_radius"
+                    app:endIconDrawable="@drawable/ic_baseline_clear_24"
+                    app:endIconMode="clear_text"
+                    app:helperText="@string/bottom_sheet_wikipedia_text_input_helper_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin_top"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bottom_sheet_search_button"
+                    style="@style/Widget.Material3.Button.UnelevatedButton.SearchButton"
+                    android:layout_marginTop="@dimen/common_margin_top"
+                    android:text="@string/bottom_sheet_search_button_text" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>
