@@ -7,6 +7,7 @@
 
     <!-- BottomNavigation begin -->
     <string name="bottom_navigation_home">Home</string>
+    <string name="bottom_navigation_asteroids">Asteroids</string>
     <string name="bottom_navigation_settings">Settings</string>
     <!-- BottomNavigation end -->
 
@@ -15,7 +16,8 @@
     <!-- MainFragment end -->
 
     <!-- BottomSheet begin -->
-    <string name="bottom_sheet_wikipedia_text_input_helper_text">Type words for searching in Wikipedia</string>
+    <string name="bottom_sheet_wikipedia_text_input_helper_text">
+        Type words for searching in Wikipedia</string>
     <string name="bottom_sheet_search_button_text">Search</string>
     <!-- BottomSheet end -->
 
@@ -25,5 +27,26 @@
     <string name="settings_fragment_moon_theme">Moon</string>
     <string name="settings_fragment_mars_theme">Mars</string>
     <!-- SettingsFragment end -->
+
+    <!-- AsteroidsNeoWSFragment begin -->
+    <string name="asteroidsneows_fragment_header">Nearest asteroids</string>
+    <!-- AsteroidsNeoWSFragment end -->
+
+    <!-- AsteroidsNeoWSFragment RecyclerItem begin -->
+    <string name="fragment_asteroidsneows_recycler_item_id">ID: %1$s</string>
+    <string name="fragment_asteroidsneows_recycler_item_name">Name: %1$s</string>
+    <string name="fragment_asteroidsneows_recycler_item_magnitude">
+        Absolute magnitude (H): %1$s</string>
+    <string name="fragment_asteroidsneows_recycler_item_diameter_min">
+        Estimated min diameter (m): %1$s</string>
+    <string name="fragment_asteroidsneows_recycler_item_diameter_max">
+        Estimated max diameter (m): %1$s</string>
+    <string name="fragment_asteroidsneows_recycler_item_hazardous">
+        Potentially hazardous: %1$s</string>
+    <string name="fragment_asteroidsneows_recycler_item_relative_velocity">
+        Relative velocity (km/s): %1$s</string>
+    <string name="fragment_asteroidsneows_recycler_item_approach_date">
+        Close approach date: %1$s</string>
+    <!-- AsteroidsNeoWSFragment RecyclerItem end -->
 
 </resources>

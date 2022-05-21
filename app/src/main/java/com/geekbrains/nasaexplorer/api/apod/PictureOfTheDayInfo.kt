@@ -1,4 +1,4 @@
-package com.geekbrains.nasaexplorer.api
+package com.geekbrains.nasaexplorer.api.apod
 
 import com.geekbrains.nasaexplorer.common.EMPTY_STRING
 import java.util.*

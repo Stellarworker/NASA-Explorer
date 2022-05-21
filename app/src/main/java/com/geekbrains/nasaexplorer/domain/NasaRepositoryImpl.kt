@@ -2,7 +2,8 @@ package com.geekbrains.nasaexplorer.domain
 
 import com.geekbrains.nasaexplorer.BuildConfig
 import com.geekbrains.nasaexplorer.api.NasaApi
-import com.geekbrains.nasaexplorer.api.PictureOfTheDayInfo
+import com.geekbrains.nasaexplorer.api.apod.PictureOfTheDayInfo
+import com.geekbrains.nasaexplorer.api.asteroids_neows.AsteroidsNeoWSResponse
 import com.geekbrains.nasaexplorer.common.BASE_NASA_URL
 import com.geekbrains.nasaexplorer.utils.convertPOTDRtoPOTDI
 import okhttp3.OkHttpClient
@@ -27,4 +28,8 @@ class NasaRepositoryImpl : NasaRepository {
 
     override suspend fun pictureOfTheDay(): PictureOfTheDayInfo =
         convertPOTDRtoPOTDI(api.pictureOfTheDay(BuildConfig.NASA_API_KEY))
+
+
+    override suspend fun asteroidsInfo(): AsteroidsNeoWSResponse =
+        api.asteroidsInfo(BuildConfig.NASA_API_KEY)
 }

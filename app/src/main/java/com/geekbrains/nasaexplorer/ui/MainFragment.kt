@@ -3,10 +3,10 @@ package com.geekbrains.nasaexplorer.ui
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import android.view.View
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.coroutineScope
 import coil.load
 import com.geekbrains.nasaexplorer.R
@@ -14,7 +14,10 @@ import com.geekbrains.nasaexplorer.common.BASE_WIKIPEDIA_URL
 import com.geekbrains.nasaexplorer.common.EMPTY_STRING
 import com.geekbrains.nasaexplorer.databinding.FragmentMainBinding
 import com.geekbrains.nasaexplorer.domain.NasaRepositoryImpl
-import com.geekbrains.nasaexplorer.utils.*
+import com.geekbrains.nasaexplorer.utils.hide
+import com.geekbrains.nasaexplorer.utils.hideKeyboard
+import com.geekbrains.nasaexplorer.utils.makeSnackbar
+import com.geekbrains.nasaexplorer.utils.show
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 

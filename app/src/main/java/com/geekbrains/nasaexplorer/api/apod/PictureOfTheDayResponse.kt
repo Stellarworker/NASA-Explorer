@@ -1,4 +1,4 @@
-package com.geekbrains.nasaexplorer.api
+package com.geekbrains.nasaexplorer.api.apod
 
 import com.google.gson.annotations.SerializedName
 import java.util.*
