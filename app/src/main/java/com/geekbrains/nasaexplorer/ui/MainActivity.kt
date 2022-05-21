@@ -25,7 +25,13 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.main_activity_fragment_container) as NavHostFragment
         setupActionBarWithNavController(
             navHostFragment.navController,
-            AppBarConfiguration(setOf(R.id.navigation_home, R.id.navigation_settings))
+            AppBarConfiguration(
+                setOf(
+                    R.id.navigation_home,
+                    R.id.navigation_asteroids,
+                    R.id.navigation_settings
+                )
+            )
         )
         binding.mainActivityBottomNavigation
             .setupWithNavController(navHostFragment.navController)
