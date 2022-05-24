@@ -1,5 +1,6 @@
 package com.geekbrains.nasaexplorer.ui
 
+import android.animation.ValueAnimator
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -18,6 +19,9 @@ import com.geekbrains.nasaexplorer.utils.hide
 import com.geekbrains.nasaexplorer.utils.hideKeyboard
 import com.geekbrains.nasaexplorer.utils.makeSnackbar
 import com.geekbrains.nasaexplorer.utils.show
+
+private const val INITIAL_SIZE = 300f
+private const val DURATION = 500L
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
@@ -95,6 +99,13 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             bottomSheetIncluded.bottomSheetRoot.show()
             progressBarIncluded.progressBarRoot.hide()
         }
+        ValueAnimator.ofFloat(INITIAL_SIZE, resources.getDimension(R.dimen.common_header_small))
+            .apply {
+                duration = DURATION
+                addUpdateListener {
+                    binding.mainFragmentHeader.textSize = it.animatedValue as Float
+                }
+            }.start()
     }
 
 }
