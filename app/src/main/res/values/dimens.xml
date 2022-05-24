@@ -18,6 +18,10 @@
     <dimen name="bottom_sheet_search_button_text_size">20sp</dimen>
     <!-- BottomSheet end -->
 
+    <!-- AsteroidsNeoWSFragment begin -->
+    <dimen name="asteroidsneows_fragment_collapsing_toolbar_image_layout_height">200dp</dimen>
+    <!-- AsteroidsNeoWSFragment end -->
+
     <!-- AsteroidsNeoWSFragment RecyclerItem begin -->
     <dimen name="fragment_asteroidsneows_recycler_item_card_margin_horizontal">5dp</dimen>
     <dimen name="fragment_asteroidsneows_recycler_item_card_margin_top">5dp</dimen>

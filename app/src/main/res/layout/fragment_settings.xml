@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/settings_fragment_root"
     style="@style/Background"
     android:layout_width="match_parent"
@@ -22,32 +23,38 @@
                 style="@style/Header.Medium"
                 android:text="@string/settings_fragment_themes_header" />
 
-            <RadioGroup
-                android:id="@+id/themes_group"
+            <androidx.constraintlayout.motion.widget.MotionLayout
+                android:id="@+id/animation_radiogroup_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/common_margin_top">
+                app:layoutDescription="@xml/fragment_settings_scene">
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/system_default_theme"
+                <RadioGroup
+                    android:id="@+id/themes_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/settings_fragment_system_default_theme" />
+                    android:layout_marginTop="@dimen/common_margin_top">
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/moon_theme"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/settings_fragment_moon_theme" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/system_default_theme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_fragment_system_default_theme" />
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/mars_theme"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/settings_fragment_mars_theme" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/moon_theme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_fragment_moon_theme" />
 
-            </RadioGroup>
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/mars_theme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_fragment_mars_theme" />
 
+                </RadioGroup>
+            </androidx.constraintlayout.motion.widget.MotionLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>

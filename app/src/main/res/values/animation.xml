@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- SettingsFragment begin -->
+    <item name="duration" type="integer">1000</item>
+    <item name="initial_alpha" format="float" type="integer">1.0</item>
+    <item name="final_alpha" format="float" type="integer">0.0</item>
+    <!-- SettingsFragment end -->
+
+</resources>
