@@ -3,7 +3,6 @@ package com.geekbrains.nasaexplorer.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.geekbrains.nasaexplorer.common.NETWORK_ERROR_MESSAGE
 import com.geekbrains.nasaexplorer.domain.NasaRepository
 import com.geekbrains.nasaexplorer.utils.convertPODTItoMainFD
 import kotlinx.coroutines.flow.Flow
@@ -11,6 +10,8 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import java.io.IOException
+
+private const val NETWORK_ERROR_MESSAGE = "Network Error!"
 
 class MainViewModel(private val repository: NasaRepository) : ViewModel() {
 

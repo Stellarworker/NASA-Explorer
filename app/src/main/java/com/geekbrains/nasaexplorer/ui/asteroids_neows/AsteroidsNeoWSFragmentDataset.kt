@@ -1,6 +1,6 @@
 package com.geekbrains.nasaexplorer.ui.asteroids_neows
 
-import com.geekbrains.nasaexplorer.common.EMPTY_STRING
+private const val EMPTY_STRING = ""
 
 data class AsteroidDataset(
     val id: String = EMPTY_STRING,

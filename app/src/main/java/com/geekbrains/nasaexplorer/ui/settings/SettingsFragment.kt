@@ -7,11 +7,12 @@ import android.view.View
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.fragment.app.Fragment
 import com.geekbrains.nasaexplorer.R
-import com.geekbrains.nasaexplorer.common.EMPTY_INT
-import com.geekbrains.nasaexplorer.common.THEME_ID
 import com.geekbrains.nasaexplorer.databinding.FragmentSettingsBinding
 import com.geekbrains.nasaexplorer.utils.convertRBIDtoTID
 import com.geekbrains.nasaexplorer.utils.convertTIDtoRBID
+
+private const val EMPTY_INT = -1
+private const val THEME_ID = "THEME_ID"
 
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
 

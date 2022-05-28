@@ -1,7 +1,8 @@
 package com.geekbrains.nasaexplorer.api.apod
 
-import com.geekbrains.nasaexplorer.common.EMPTY_STRING
 import java.util.*
+
+private const val EMPTY_STRING = ""
 
 data class PictureOfTheDayInfo(
     val copyright: String = EMPTY_STRING,

@@ -11,8 +11,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.coroutineScope
 import coil.load
 import com.geekbrains.nasaexplorer.R
-import com.geekbrains.nasaexplorer.common.BASE_WIKIPEDIA_URL
-import com.geekbrains.nasaexplorer.common.EMPTY_STRING
 import com.geekbrains.nasaexplorer.databinding.FragmentMainBinding
 import com.geekbrains.nasaexplorer.domain.NasaRepositoryImpl
 import com.geekbrains.nasaexplorer.utils.hide
@@ -20,6 +18,8 @@ import com.geekbrains.nasaexplorer.utils.hideKeyboard
 import com.geekbrains.nasaexplorer.utils.makeSnackbar
 import com.geekbrains.nasaexplorer.utils.show
 
+private const val EMPTY_STRING = ""
+private const val BASE_WIKIPEDIA_URL = "https://en.wikipedia.org/wiki/%1\$s"
 private const val INITIAL_SIZE = 300f
 private const val DURATION = 500L
 

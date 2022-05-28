@@ -3,8 +3,9 @@ package com.geekbrains.nasaexplorer.utils
 import android.view.View
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.geekbrains.nasaexplorer.common.EMPTY_STRING
 import com.google.android.material.snackbar.Snackbar
+
+private const val EMPTY_STRING = ""
 
 fun View.makeSnackbar(
     text: String = EMPTY_STRING,
