@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- AsteroidsNeoWSFragment begin -->
+    <item name="asteroidsneows_fragment_collapsing_toolbar_image_alpha" type="integer">0</item>
+    <!-- AsteroidsNeoWSFragment end -->
+
     <!-- SettingsFragment begin -->
     <item name="duration" type="integer">1000</item>
     <item name="initial_alpha" format="float" type="integer">1.0</item>

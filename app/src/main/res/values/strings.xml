@@ -3,6 +3,7 @@
     <!-- Common Application begin -->
     <string name="app_name">NASA Explorer</string>
     <string name="empty_query">Empty query!</string>
+    <string name="reload">Reload</string>
     <!-- Common Application end -->
 
     <!-- BottomNavigation begin -->

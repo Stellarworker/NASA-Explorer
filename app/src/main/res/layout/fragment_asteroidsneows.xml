@@ -24,8 +24,10 @@
                 android:id="@+id/asteroidsneows_fragment_collapsing_toolbar_image"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/asteroidsneows_fragment_collapsing_toolbar_image_layout_height"
+                android:alpha="@integer/asteroidsneows_fragment_collapsing_toolbar_image_alpha"
                 android:scaleType="fitXY"
                 android:src="@drawable/asteroids"
+                android:visibility="gone"
                 app:layout_collapseMode="parallax" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -41,6 +43,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/asteroidsneows_fragment_header"
             style="@style/Header.Medium"
             android:layout_marginTop="@dimen/common_margin_top"
             android:text="@string/asteroidsneows_fragment_header" />
