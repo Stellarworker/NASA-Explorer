@@ -7,16 +7,16 @@ import android.view.View
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.fragment.app.Fragment
 import com.geekbrains.nasaexplorer.R
-import com.geekbrains.nasaexplorer.common.EMPTY_INT
-import com.geekbrains.nasaexplorer.common.THEME_ID
 import com.geekbrains.nasaexplorer.databinding.FragmentSettingsBinding
 import com.geekbrains.nasaexplorer.utils.convertRBIDtoTID
 import com.geekbrains.nasaexplorer.utils.convertTIDtoRBID
 
-class SettingsFragment : Fragment(R.layout.fragment_settings) {
+private const val EMPTY_INT = -1
+private const val THEME_ID = "THEME_ID"
+private const val INITIAL_SIZE = 0f
+private const val ANIMATION_DURATION = 500L
 
-    private val INITIAL_SIZE = 0f
-    private val DURATION = 500L
+class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -67,9 +67,10 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         binding.animationRadiogroup1.setTransitionListener(transitionListener)
         ValueAnimator.ofFloat(INITIAL_SIZE, resources.getDimension(R.dimen.common_header_small))
             .apply {
-                duration = DURATION
-                addUpdateListener {
-                    binding.settingsFragmentThemesHeader.textSize = it.animatedValue as Float
+                duration = ANIMATION_DURATION
+                addUpdateListener { animator ->
+                    binding.settingsFragmentThemesHeader.textSize =
+                        animator.animatedValue as Float
                 }
             }.start()
     }

@@ -4,12 +4,13 @@ import com.geekbrains.nasaexplorer.BuildConfig
 import com.geekbrains.nasaexplorer.api.NasaApi
 import com.geekbrains.nasaexplorer.api.apod.PictureOfTheDayInfo
 import com.geekbrains.nasaexplorer.api.asteroids_neows.AsteroidsNeoWSResponse
-import com.geekbrains.nasaexplorer.common.BASE_NASA_URL
 import com.geekbrains.nasaexplorer.utils.convertPOTDRtoPOTDI
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+
+private const val BASE_NASA_URL = "https://api.nasa.gov/"
 
 class NasaRepositoryImpl : NasaRepository {
 

@@ -8,9 +8,10 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.geekbrains.nasaexplorer.R
-import com.geekbrains.nasaexplorer.common.EMPTY_INT
-import com.geekbrains.nasaexplorer.common.THEME_ID
 import com.geekbrains.nasaexplorer.databinding.ActivityMainBinding
+
+private const val EMPTY_INT = -1
+private const val THEME_ID = "THEME_ID"
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

@@ -1,6 +1,6 @@
 package com.geekbrains.nasaexplorer.ui
 
-import com.geekbrains.nasaexplorer.common.EMPTY_STRING
+private const val EMPTY_STRING = ""
 
 data class MainFragmentDataset(
     val image: String = EMPTY_STRING,

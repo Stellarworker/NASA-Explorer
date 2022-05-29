@@ -3,6 +3,7 @@
     <!-- Common Application begin -->
     <string name="app_name">NASA Explorer</string>
     <string name="empty_query">Empty query!</string>
+    <string name="reload">Reload</string>
     <!-- Common Application end -->
 
     <!-- BottomNavigation begin -->
@@ -47,7 +48,6 @@
         Relative velocity (km/s): %1$s</string>
     <string name="fragment_asteroidsneows_recycler_item_approach_date">
         Close approach date: %1$s</string>
-
     <!-- AsteroidsNeoWSFragment RecyclerItem end -->
 
 </resources>

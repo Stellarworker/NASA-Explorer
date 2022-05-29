@@ -29,14 +29,16 @@
                     android:id="@+id/main_fragment_header"
                     style="@style/Header.Medium"
                     android:layout_marginTop="@dimen/common_margin_top"
-                    android:text="@string/main_fragment_header" />
+                    android:text="@string/main_fragment_header"
+                    android:visibility="gone" />
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/main_fragment_picture_of_the_day"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/common_margin_top"
-                    android:scaleType="fitXY" />
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 

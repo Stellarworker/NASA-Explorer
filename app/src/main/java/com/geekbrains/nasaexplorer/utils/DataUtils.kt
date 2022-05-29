@@ -4,10 +4,18 @@ import com.geekbrains.nasaexplorer.R
 import com.geekbrains.nasaexplorer.api.apod.PictureOfTheDayInfo
 import com.geekbrains.nasaexplorer.api.apod.PictureOfTheDayResponse
 import com.geekbrains.nasaexplorer.api.asteroids_neows.AsteroidsNeoWSResponse
-import com.geekbrains.nasaexplorer.common.*
 import com.geekbrains.nasaexplorer.ui.MainFragmentDataset
 import com.geekbrains.nasaexplorer.ui.asteroids_neows.AsteroidDataset
 import com.geekbrains.nasaexplorer.ui.asteroids_neows.AsteroidsNeoWSFragmentDataset
+
+private const val ONE_ITEM = 1
+private const val EMPTY_STRING = ""
+private const val ZERO_INT = 0
+private const val INDENTED_LINE = "   "
+private const val DOT = "."
+private const val SUBST_STRING = "EMPTY_DATA!"
+private const val YES = "Yes"
+private const val NO = "No"
 
 fun String.substituteIfEmpty() = this.ifBlank { SUBST_STRING }
 

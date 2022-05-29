@@ -1,18 +1,19 @@
 package com.geekbrains.nasaexplorer.ui
 
-import android.animation.ValueAnimator
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.coroutineScope
+import androidx.transition.Fade
+import androidx.transition.Slide
+import androidx.transition.TransitionManager
+import androidx.transition.TransitionSet
 import coil.load
 import com.geekbrains.nasaexplorer.R
-import com.geekbrains.nasaexplorer.common.BASE_WIKIPEDIA_URL
-import com.geekbrains.nasaexplorer.common.EMPTY_STRING
 import com.geekbrains.nasaexplorer.databinding.FragmentMainBinding
 import com.geekbrains.nasaexplorer.domain.NasaRepositoryImpl
 import com.geekbrains.nasaexplorer.utils.hide
@@ -20,8 +21,9 @@ import com.geekbrains.nasaexplorer.utils.hideKeyboard
 import com.geekbrains.nasaexplorer.utils.makeSnackbar
 import com.geekbrains.nasaexplorer.utils.show
 
-private const val INITIAL_SIZE = 300f
-private const val DURATION = 500L
+private const val EMPTY_STRING = ""
+private const val BASE_WIKIPEDIA_URL = "https://en.wikipedia.org/wiki/%1\$s"
+private const val ANIMATION_DURATION = 1000L
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
@@ -49,7 +51,13 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         viewLifecycleOwner.lifecycle.coroutineScope.launchWhenStarted {
             mainViewModel.error.collect { errorMessage ->
-                Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_LONG).show()
+                binding.root.makeSnackbar(
+                    text = errorMessage,
+                    actionText = getString(R.string.reload),
+                    action = {
+                        mainViewModel.requestPictureOfTheDay()
+                    }
+                )
             }
         }
 
@@ -96,16 +104,18 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     private fun showContent(binding: FragmentMainBinding) {
         with(binding) {
             mainFragmentDataContainer.show()
+            TransitionManager.beginDelayedTransition(
+                mainFragmentRoot,
+                TransitionSet().apply {
+                    addTransition(Slide(Gravity.TOP))
+                    addTransition(Fade())
+                    duration = ANIMATION_DURATION
+                    ordering = TransitionSet.ORDERING_TOGETHER
+                })
+            mainFragmentHeader.show()
+            mainFragmentPictureOfTheDay.show()
             bottomSheetIncluded.bottomSheetRoot.show()
             progressBarIncluded.progressBarRoot.hide()
         }
-        ValueAnimator.ofFloat(INITIAL_SIZE, resources.getDimension(R.dimen.common_header_small))
-            .apply {
-                duration = DURATION
-                addUpdateListener {
-                    binding.mainFragmentHeader.textSize = it.animatedValue as Float
-                }
-            }.start()
     }
-
 }
