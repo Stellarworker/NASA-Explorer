@@ -7,19 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.geekbrains.nasaexplorer.ui.MainFragment"
+        android:name="com.stellarworker.nasaexplorer.ui.MainFragment"
         android:label="@string/bottom_navigation_home"
         tools:layout="@layout/fragment_main" />
 
     <fragment
         android:id="@+id/navigation_asteroids"
-        android:name="com.geekbrains.nasaexplorer.ui.asteroids_neows.AsteroidsNeoWSFragment"
+        android:name="com.stellarworker.nasaexplorer.ui.asteroids_neows.AsteroidsNeoWSFragment"
         android:label="@string/bottom_navigation_asteroids"
         tools:layout="@layout/fragment_asteroidsneows" />
 
     <fragment
+        android:id="@+id/navigation_notes"
+        android:name="com.stellarworker.nasaexplorer.ui.notes.NotesFragment"
+        android:label="@string/bottom_navigation_notes"
+        tools:layout="@layout/fragment_notes" />
+
+    <fragment
         android:id="@+id/navigation_settings"
-        android:name="com.geekbrains.nasaexplorer.ui.settings.SettingsFragment"
+        android:name="com.stellarworker.nasaexplorer.ui.settings.SettingsFragment"
         android:label="@string/bottom_navigation_settings"
         tools:layout="@layout/fragment_settings" />
 

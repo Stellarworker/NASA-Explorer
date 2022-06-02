@@ -11,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.geekbrains.nasaexplorer"
+        applicationId "com.stellarworker.nasaexplorer"
         minSdk 23
         targetSdk 32
         versionCode 1
@@ -40,7 +40,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    namespace 'com.geekbrains.nasaexplorer'
+    namespace 'com.stellarworker.nasaexplorer'
 }
 
 dependencies {
