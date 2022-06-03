@@ -29,10 +29,6 @@
     <dimen name="fragment_asteroidsneows_recycler_item_card_elevation">5dp</dimen>
     <!-- AsteroidsNeoWSFragment RecyclerItem end -->
 
-    <!-- NotesFragment begin -->
-
-    <!-- NotesFragment end -->
-
     <!-- NotesFragment RecyclerItem begin -->
     <dimen name="fragment_notes_recycler_item_card_margin_horizontal">5dp</dimen>
     <dimen name="fragment_notes_recycler_item_card_margin_top">5dp</dimen>

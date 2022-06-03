@@ -1,8 +1,13 @@
 package com.stellarworker.nasaexplorer.ui
 
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.SpannableStringBuilder
+import android.text.style.ForegroundColorSpan
 import android.view.Gravity
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -24,6 +29,10 @@ import com.stellarworker.nasaexplorer.utils.show
 private const val EMPTY_STRING = ""
 private const val BASE_WIKIPEDIA_URL = "https://en.wikipedia.org/wiki/%1\$s"
 private const val ANIMATION_DURATION = 1000L
+private const val DIVIDER = 2
+private const val INT_ZERO = 0
+private const val POSITION_OFFSET = 1
+private const val CHAR_DELIMITER = ' '
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
@@ -66,7 +75,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 with(binding) {
                     mainFragmentPictureOfTheDay.load(dataset.image)
                     bottomSheetIncluded.bottomSheetPictureTitle.text =
-                        dataset.title
+                        decorateText(dataset.title)
                     bottomSheetIncluded.bottomSheetPictureExplanation.text =
                         dataset.explanation
                 }
@@ -118,4 +127,29 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             progressBarIncluded.progressBarRoot.hide()
         }
     }
+
+    private fun decorateText(text: String) =
+        SpannableStringBuilder().apply {
+            text.split(CHAR_DELIMITER).also { list ->
+                list.forEachIndexed { position, word ->
+                    append(
+                        SpannableString(word).apply {
+                            setSpan(
+                                ForegroundColorSpan(
+                                    if (position % DIVIDER != INT_ZERO) Color.BLACK else Color.BLUE
+                                ),
+                                INT_ZERO,
+                                word.length,
+                                Spannable.SPAN_INCLUSIVE_INCLUSIVE
+                            )
+                        }
+                    )
+                    if (position < list.size - POSITION_OFFSET) {
+                        append(CHAR_DELIMITER)
+                    }
+                }
+
+            }
+
+        }
 }
