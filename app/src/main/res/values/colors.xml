@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="bottom_sheet_fragment_root_background">#c7dcff</color>
+    <color name="bottom_sheet_root_background">#c7dcff</color>
 
     <!-- Moon day colors begin -->
     <color name="moon_day_1">#998F96</color>

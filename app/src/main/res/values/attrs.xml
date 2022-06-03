@@ -2,5 +2,6 @@
 <resources>
     <attr name="headerColor" format="reference" />
     <attr name="headerFont" format="reference" />
+    <attr name="textFont" format="reference" />
     <attr name="primaryBackgroundColor" format="reference" />
 </resources>
