@@ -17,7 +17,7 @@ private const val SUBST_STRING = "EMPTY_DATA!"
 private const val YES = "Yes"
 private const val NO = "No"
 
-fun String.substituteIfEmpty() = this.ifBlank { SUBST_STRING }
+fun String.substituteIfEmpty(substString: String) = this.ifBlank { substString }
 
 fun String.dropAfterDot() = this.replaceAfter(DOT, EMPTY_STRING).dropLast(ONE_ITEM)
 
@@ -40,9 +40,9 @@ fun convertPOTDRtoPOTDI(response: PictureOfTheDayResponse) =
 fun convertPODTItoMainFD(info: PictureOfTheDayInfo) =
     with(info) {
         MainFragmentDataset(
-            image = url.substituteIfEmpty(),
-            title = title.substituteIfEmpty(),
-            explanation = explanation.prependIndent(INDENTED_LINE).substituteIfEmpty()
+            image = url.substituteIfEmpty(SUBST_STRING),
+            title = title.substituteIfEmpty(SUBST_STRING),
+            explanation = explanation.prependIndent(INDENTED_LINE).substituteIfEmpty(SUBST_STRING)
         )
     }
 
